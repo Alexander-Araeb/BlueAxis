@@ -45,6 +45,10 @@
                 <div>
                     <input type="password" id="repeat_password" name="repeat_password" placeholder="Repeat password" />
                 </div>
+                <div class="spacer1"></div>
+                <div>
+                    <input type="text" id="meterID" name="meterID" placeholder="Meter ID" />
+                </div>
               
                 <div class="spacer2"></div>
                 <div>
@@ -64,7 +68,7 @@
     </div>
 
         <div class="footer">
-            © FACTOREM 2024
+            © BLUEAXIS 2024
           </div>
 
 </body>
