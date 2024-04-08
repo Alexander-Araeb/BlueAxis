@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: 'calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .maincontainer{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #ecf0f4;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    min-height: 650px;
+    min-width: 400px;
+    background-image: linear-gradient(to bottom right, #ECF0F4, #CCD6E1, #F4F0EC);
+  }
+
+  .spacer1{
+    width: 100%;
+    height: 25px;
+  }
+
+  .r1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .koilogo1 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    background: url(KOI.png);
+    background-size: 100px 100px;
+  }
+
+  .spacer2{
+    width: 100%;
+    height: 50px;
+  }
+
+  .logincontainer{
+    height: 550px;
+    width: 350px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 14px 14px 20px grey, -14px -14px 20px white;
+  }
+
+  .inputs {
+    text-align: left;
+  }
+  
+  input, button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  input::placeholder {
+    color: gray;
+  }
+  
+  input {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1;
+  }
+  
+  button {
+    color: white;
+    background: #1DA1F2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+  }
+  
+  button:hover {
+    box-shadow: none;
+  }
+
+  .r2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    color: white;
+    background: grey;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+  }
+  
+  button2:hover {
+    box-shadow: none;
+  }
+
+  .t1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .t2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    width: 100%;
+  }
+
+  .invalidlogin{
+    text-decoration: none;
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    font-style: italic;
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+    font-size: 10px;
+    color: white;
+    letter-spacing: 10px;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-family: 'copperplate', serif;
+  }
