@@ -6,20 +6,31 @@ if (isset($_SESSION["user_id"])){
 
     $mysqli = require __DIR__ ."/database.php";
 
-    $sql = "SELECT * FROM user WHERE id = {$_SESSION["user_id"]}";
+    $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
 
     $result = $mysqli->query($sql);
 
     $user = $result->fetch_assoc();
-}
 
-$available=$user["available"];
-$ave=$user["ave"];
-$arr=$user["arr"];
-$prev=$user["prev"];
-$stat=$user["stat"];
-$net=$user["net"];
-?>
+    $sql = "SELECT * FROM meters WHERE meterID='{$user["meter"]}'";
+
+    $result = $mysqli->query($sql);
+
+    $meter = $result->fetch_assoc();
+
+
+    $available=$meter["available"];
+
+    $ave=$meter["ave"];
+
+    $arr=$meter["arr"];
+
+    $pre=$meter["pre"];
+
+    $stat=$meter["stat"];
+
+    $net=$meter["net"];
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -139,7 +150,7 @@ $net=$user["net"];
                             PREV. USAGE (L):
                         </div>
                         <div class="boxcontent2">
-                            <?=htmlspecialchars($prev) ?>
+                            <?=htmlspecialchars($pre) ?>
                         </div>
                     </div>
                 </div>
@@ -188,7 +199,7 @@ $net=$user["net"];
         ______________________________
     </div>
     <div class="text4">
-        02102100081
+        <?=htmlspecialchars($user["meter"]) ?>
     </div>
 
     <div class="break"></div>
