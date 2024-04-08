@@ -36,12 +36,16 @@ if ( $_POST["password"] !== $_POST["repeat_password"]){
     die("Passwords must match.");
 }
 
+if (empty($_POST["meterID"])){
+    die("Meter ID/No. is required");
+}
+
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ ."/database.php";
 
-$sql = "INSERT INTO users (firstname, lastname, phone, email, password_hash)
-        VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO users (firstname, lastname, phone, email, password_hash, meter)
+        VALUES (?, ?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
@@ -49,15 +53,28 @@ if ($stmt->prepare($sql) == false) {
     die ("SQL error: " . $mysqli->error);
 }
 
-$stmt->bind_param("sssss",
+$stmt->bind_param("ssssss",
                 $_POST["firstname"],
                 $_POST["lastname"],
                 $_POST["phone"],
                 $_POST["email"],
-                $password_hash);
+                $password_hash,
+                $_POST["meterID"]);
 
 try{
     $stmt->execute();
+
+    $sql = "INSERT INTO meters (meterID)
+        VALUES (?)";
+
+    $stmt = $mysqli->stmt_init();
+    if ($stmt->prepare($sql) == false) {
+        die ("SQL error: " . $mysqli->error);
+    }
+    $stmt->bind_param("s",
+                $_POST["meterID"]);
+    $stmt->execute();
+
     header("Location: login.php");
     exit;
     } 

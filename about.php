@@ -53,7 +53,7 @@
           With Gratitude,
           <br><br>
           Alexander,<br>
-          Founder of KOI HYDRO-TECHNILOGY.
+          Founder of BLUEAXIS.
           
         </div>
         <div class="imageP3"></div>

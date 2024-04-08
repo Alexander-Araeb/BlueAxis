@@ -65,7 +65,7 @@
         ?>
 
         <div class="footer">
-            © FACTOREM 2024
+            © BLUEAXIS 2024
         </div>
     </div>
 

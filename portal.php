@@ -6,7 +6,7 @@ if (isset($_SESSION["user_id"])){
 
     $mysqli = require __DIR__ ."/database.php";
 
-    $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
+    $sql = "SELECT * FROM users WHERE id = '{$_SESSION["user_id"]}'";
 
     $result = $mysqli->query($sql);
 
@@ -32,6 +32,8 @@ if (isset($_SESSION["user_id"])){
     $net=$meter["net"];
 }
 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +55,7 @@ if (isset($_SESSION["user_id"])){
           <a href="#">USAGE DATA</a>
           <a href="#">TOP-UP CREDIT</a>
           <a href="#">CONTROLS</a>
-          <a href="index.html">KOI</a>
+          <a href="index.php">KOI</a>
           <a href="#">PROFILE</a>
           <a href="#"></a>
           <a href="#"></a>

@@ -56,6 +56,11 @@ validation
             errorMessage: "Passwords should match"
         }
     ])
+    .addField("#meterID", [
+        {
+            rule: "required"
+        }
+    ])
     .onSuccess((event) => {
         document.getElementById("register").submit();
     });

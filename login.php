@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 
         <div class="footer">
-            © FACTOREM 2024
+            © BLUEAXIS 2024
           </div>
 
 </body>
